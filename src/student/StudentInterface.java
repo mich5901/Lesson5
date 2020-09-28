@@ -20,7 +20,7 @@ public class StudentInterface {
             stu1.setScore(i, score);
         }
         scan.nextLine();//clears scanner buffer
-        System.out.println("\n=======================\n");
+        System.out.println("\n-----------------------\n");
         //input the second students data
         //input first students data
         System.out.print("Enter name for second student: ");
@@ -31,7 +31,7 @@ public class StudentInterface {
             score = scan.nextInt();
             stu2.setScore(i, score);
         }
-        System.out.println("\n=======================\n");
+        System.out.println("\n-----------------------\n");
         System.out.println(stu1);
         System.out.println(stu2);
         
