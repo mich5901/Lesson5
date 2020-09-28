@@ -74,4 +74,8 @@ public class Student {
         str += "nTest:\t" + test3;
         return str;
     }
+
+    String validateData() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
