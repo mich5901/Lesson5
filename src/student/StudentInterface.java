@@ -19,7 +19,6 @@ public class StudentInterface {
             score = scan.nextInt();
             stu1.setScore(i, score);
         }
-        String errosmsg = stu1.validateData();
         scan.nextLine();//clears scanner buffer
         System.out.println("\n=======================\n");
         //input the second students data
@@ -39,5 +38,5 @@ public class StudentInterface {
          
         }
         
-    }
+    
 }
