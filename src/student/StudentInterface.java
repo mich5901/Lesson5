@@ -19,6 +19,7 @@ public class StudentInterface {
             score = scan.nextInt();
             stu1.setScore(i, score);
         }
+        String errosmsg = stu1.validateData();
         scan.nextLine();//clears scanner buffer
         System.out.println("\n=======================\n");
         //input the second students data
@@ -26,7 +27,7 @@ public class StudentInterface {
         System.out.print("Enter name for second student: ");
         name = scan.nextLine();
         stu2.setName(name);
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 1; i <= 3; i++) {
             System.out.format("Enter test score %d for %s > ", i, stu2.getName());
             score = scan.nextInt();
             stu2.setScore(i, score);
@@ -34,5 +35,9 @@ public class StudentInterface {
         System.out.println("\n=======================\n");
         System.out.println(stu1);
         System.out.println(stu2);
+        
+         
+        }
+        
     }
 }
