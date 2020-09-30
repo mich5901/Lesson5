@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 public class Face {
 
     private int xPos, yPos, diameter;
-    private int newx, newy;
+    private int newx, newy, newsize;
     private Color color;
     private Graphics g;
 
@@ -41,7 +41,8 @@ public class Face {
     }
 
     public void erase() {
-        
+        g.setColor(Color.white);
+        g.fillRect(xPos-5, yPos-5, diameter+20, diameter+20);
     }
 
     public void move(int newx, int newy){
@@ -54,6 +55,9 @@ public class Face {
         drawEyes();
         drawMouth();
 
+    }
+    public void resize(int newsize){
+        diameter = newsize;
     }
 
 }

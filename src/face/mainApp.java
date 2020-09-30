@@ -1,5 +1,7 @@
 package face;
 
+import java.awt.Color;
+import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 
 public class mainApp extends javax.swing.JFrame {
@@ -32,8 +34,18 @@ public class mainApp extends javax.swing.JFrame {
         });
 
         btnresize.setText("Resize Face");
+        btnresize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnresizeActionPerformed(evt);
+            }
+        });
 
         btncolor.setText("Change Color");
+        btncolor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncolorActionPerformed(evt);
+            }
+        });
 
         btnmood.setText("Toggle Mood");
 
@@ -99,6 +111,18 @@ public class mainApp extends javax.swing.JFrame {
         f.move(newx, newy);
         f.draw();
     }//GEN-LAST:event_btnmoveActionPerformed
+
+    private void btnresizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresizeActionPerformed
+        int newsize = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter new Diameter"));
+        f.erase();
+        f.resize(newsize);
+        f.draw();
+    }//GEN-LAST:event_btnresizeActionPerformed
+
+    private void btncolorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncolorActionPerformed
+        Color newColor = JColorChooser.showDialog(this, "Pick new dice color", Color.red);
+        drawHead.setColor(newColor);
+    }//GEN-LAST:event_btncolorActionPerformed
 
     public static void main(String args[]) {
 
